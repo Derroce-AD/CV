@@ -1,0 +1,293 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+main {
+    width: clamp(300px, 60%,800px);
+    margin: 20px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading styles */
+h1, h2 {
+    color: #367ff5;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 1px solid #367ff5;
+    padding-bottom: 5px;
+    margin: 20px 0;
+}
+
+hr {
+    border: 0;
+    background-color: #367ff5;
+    height: 2px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Coordination section */
+.coord {
+    background: #3e3e3e;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.coord p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.adress, .phone, .mail, .character {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 20px;
+}
+
+section p {
+    margin: 5px 0;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #3e3e3e;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e0e0e0;
+}
+
+/* Informations */
+.headGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imgProfile {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.title {
+    margin-left: 20px;
+}
+
+/* Download button */
+.download-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Skills */
+.reaper:hover {
+    color:#65C32F;
+}
+
+.excel:hover {
+    color:#0077ff;
+}
+
+.fl:hover {
+    color:#ff4800;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+}
+
+.progress {
+    position: relative;
+    height: 20px;
+    background-color: #367ff5;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-text {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/* SCROLL SPY */
+.scrollSpy {
+    position: fixed;
+}
+
+nav a:hover, nav li:hover {
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: #367FD2;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .download-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .scrollSpy {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    
+    .scrollSpy {
+        display: none;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .coord p {
+        font-size: 0.9em;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .download-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Adjustments for tablets and small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .headGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+    .scrollSpy {
+        display: none;
+    }
+
+    .imgProfile {
+        width: 120px;
+    }
+}
+
+@media print {
+    .download-button {
+        display: none;
+    }
+
+    .scrollSpy {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
